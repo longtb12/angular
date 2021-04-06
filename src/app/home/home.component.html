@@ -1,0 +1,15 @@
+<h1>{{name}}</h1>
+<div>
+  <span>{{customer.id}}</span>
+  <span> {{customer.name|uppercase}}</span>
+</div>
+<div>
+  <label for="name">Customer name: </label>
+  <input id="name" [(ngModel)]="customer.name" placeholder="name">
+</div>
+
+<div>
+  <ul *ngFor="let item of customers" (click)="chooseCustomer(item)">
+    <li><span>{{item.id}} : {{item.name}}</span></li>
+  </ul>
+</div>
