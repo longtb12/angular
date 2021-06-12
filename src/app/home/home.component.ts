@@ -23,6 +23,7 @@ export class HomeComponent implements OnInit {
   }
   name = "";
   chooseCustomer(item: Customer): void {
+    debugger;
     this.name = item.id+" "+item.name;
   }
 
